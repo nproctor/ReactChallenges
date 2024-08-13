@@ -19,11 +19,9 @@ describe('ShowHideTitle Component', () => {
     it("Shall hide title after an odd number of clicks", () => {
         render(<ShowHideTitle/>);
         const button = screen.getByRole("button");
-        act( () => {
-            userEvent.click(button);
-            userEvent.click(button);
-            userEvent.click(button);
-        });
+        userEvent.click(button);
+        userEvent.click(button);
+        userEvent.click(button);
         const title = screen.queryByText("Title");
         expect(title).not.toBeVisible();
     });
@@ -31,12 +29,10 @@ describe('ShowHideTitle Component', () => {
     it("Shall show the title after an even number of clicks", () => {
         render(<ShowHideTitle/>);
         const button = screen.getByRole("button");
-        act( () => {
-            userEvent.click(button);
-            userEvent.click(button);
-            userEvent.click(button);
-            userEvent.click(button);
-        });
+        userEvent.click(button);
+        userEvent.click(button);
+        userEvent.click(button);
+        userEvent.click(button);
         const title = screen.queryByText("Title");
         expect(title).toBeVisible();
     });
