@@ -9,7 +9,7 @@ const Timer = () => {
             return;
         interval.current = setInterval(() => {
             setSeconds(seconds => seconds + 1);
-        }, 100);
+        }, 1000);
     }
 
     const stopTimer = () => {
@@ -21,7 +21,7 @@ const Timer = () => {
 
     return (
         <div>
-            <p>React Challenge #2 - Timer</p>
+            <h3>React Challenge #2 - Timer</h3>
             <h1>Timer</h1>
             <p>{Math.floor(seconds/60)} mins {seconds%60} seconds</p>
             <button onClick={startTimer}>Start</button>
