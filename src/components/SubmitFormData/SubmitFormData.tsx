@@ -25,7 +25,7 @@ const SubmitFormData = () => {
                     <input name="Name" placeholder="Name" required={true}/>   
                     <p>Enter Age:</p>
                     <input name="Age" placeholder="Age" type="number" required={true}/>
-                    <br/>
+                    <br/><br/>
                     <button type="submit">Submit</button>
                 </form>
                 <ul>
