@@ -1,5 +1,4 @@
 import {FormEvent, useState} from 'react';
-import './SubmitFormData.style.css';
 
 const SubmitFormData = () => {
     const [data, setData] = useState<string[]>([]);
