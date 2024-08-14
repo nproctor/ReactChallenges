@@ -1,0 +1,25 @@
+.progress-bar-base {
+    margin: auto;
+    background-color: gray;
+    width: 300px;
+    border-radius: 30px;
+    overflow: hidden;
+    height: 30px;
+}
+  
+.progress-bar-progress {
+    background: linear-gradient(90deg, pink 0%, orange 100%);
+    width: 10%;
+    height: 100%;
+    transition: 0.5s width;
+    border-radius: inherit;
+}
+
+.progress-bar-progress div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: center;
+    min-width: 40px;
+}
