@@ -9,9 +9,13 @@
   --color-accent: #8f6ba8;
 }
 
-.App {
-  height: 100vh;
+body {
+  min-height: 100vh;
+  height: fit-content;
   background: linear-gradient(60deg, var(--color-surface) 10%, var(--color-accent) 90%);
+}
+
+.App {
   color: var(--color-on-surface);
   display: block;
   margin: 0;
