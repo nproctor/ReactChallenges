@@ -1,38 +1,64 @@
+:root {
+  --color-surface:  #4aa2b8;
+  --color-on-surface: #eeeeee;
+  --color-primary: #eeeeee;
+  --color-on-primary: #111111;
+  --color-button: #cccccc;
+  --color-button-hover: #dddddd;
+  --color-button-active: #eeeeeee;
+  --color-accent: #8f6ba8;
+}
+
 .App {
-  text-align: center;
+  height: 100vh;
+  background: linear-gradient(60deg, var(--color-surface) 10%, var(--color-accent) 90%);
+  color: var(--color-on-surface);
+  display: block;
+  margin: 0;
+  padding: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.challenge {
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.challenge .title {
+  display: block;
+  padding: 5px;
+  font-weight: 500;
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.challenge-content {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  box-shadow: 0px 0px 10px -5px;
+  border-radius: 10px;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.challenge-content p {
+  margin: 5px 0 5px 0;
+  padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.challenge-content h1 {
+  padding: 0px;
+  margin: 0px;
+}
+
+button {
+  margin: 2px;
+  padding: 3px;
+  background-color: var(--color-button);
+  border: 2px outset var(--color-button);
+  border-radius: 3px; 
+}
+
+button:hover {
+  background-color: var(--color-button-hover);
+}
+
+button:active {
+  background-color: var(--color-button-active);
 }

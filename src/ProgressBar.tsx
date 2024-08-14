@@ -11,15 +11,19 @@ const ProgressBar = () => {
         }
     }
     return (
-        <div className='progress-bar'>
-            <h3>React Challenge #4 - Progress Bar</h3>
-            <p>Progress Bar</p>
-            <div className="progress-bar-base">
-                <div className="progress-bar-progress" style={{width: `${width}%`}}>
-                    <div>{width}%</div>
+        <div className='challenge'>
+            <span className="title">React Challenge #4 - Progress Bar</span>
+            <div className='challenge-content'>
+                <p>Progress Bar</p>
+                <div className="progress-bar-base">
+                    <div className="progress-bar-progress" style={{width: `${width}%`}}>
+                        <div>{width}%</div>
+                    </div>
                 </div>
+                <span>Input Percentage: 
+                    <input onChange={onChange} type="number"/>%
+                </span>
             </div>
-            <span>Input Percentage: <input onChange={onChange} type="number"/></span>
         </div>
     )
 }

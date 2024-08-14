@@ -20,13 +20,15 @@ const Timer = () => {
     }
 
     return (
-        <div>
-            <h3>React Challenge #2 - Timer</h3>
-            <h1>Timer</h1>
-            <p>{Math.floor(seconds/60)} mins {seconds%60} seconds</p>
-            <button onClick={startTimer}>Start</button>
-            <button onClick={stopTimer}>Stop</button>
-            <button onClick={() => setSeconds(0)}>Reset</button>
+        <div className='challenge'>
+            <span className="title">React Challenge #2 - Timer</span>
+            <div className='challenge-content'>
+                <h1>Timer</h1>
+                <p>{Math.floor(seconds/60)} mins {seconds%60} seconds</p>
+                <button onClick={startTimer}>Start</button>
+                <button onClick={stopTimer}>Stop</button>
+                <button onClick={() => setSeconds(0)}>Reset</button>
+            </div>
         </div>
     )
 }

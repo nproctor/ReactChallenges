@@ -16,21 +16,24 @@ const SubmitFormData = () => {
     }
 
     return (
-        <div className="submitFormData">
-            <h3> React Challenge #5 - Submit Form Data</h3>
-            <form onSubmit={onSubmit}>
-                <span>Enter E-mail:</span>
-                <input name="E-mail" placeholder="E-mail" required={true}/>
-                <span>Enter Name:</span>
-                <input name="Name" placeholder="Name" required={true}/>   
-                <span>Enter Age:</span>
-                <input name="Age" placeholder="Age" type="number" required={true}/>
-                <button type="submit">Submit</button>
-            </form>
-            <ul>
-                {data.length > 0 && "Submitted!"}
-                {data.map( (val, i) => <li key={i}>{val}</li>)}
-            </ul>
+        <div className="challenge">
+            <span className="title"> React Challenge #5 - Submit Form Data</span>
+            <div className='challenge-content'>
+                <form onSubmit={onSubmit}>
+                    <p>Enter E-mail:</p>
+                    <input name="E-mail" placeholder="E-mail" required={true}/>
+                    <p>Enter Name:</p>
+                    <input name="Name" placeholder="Name" required={true}/>   
+                    <p>Enter Age:</p>
+                    <input name="Age" placeholder="Age" type="number" required={true}/>
+                    <br/>
+                    <button type="submit">Submit</button>
+                </form>
+                <ul>
+                    {data.length > 0 && "Submitted!"}
+                    {data.map( (val, i) => <li key={i}>{val}</li>)}
+                </ul>
+            </div>
         </div>
     )
 }
