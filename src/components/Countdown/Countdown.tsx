@@ -1,4 +1,5 @@
 import {useState, useEffect, useRef} from 'react';
+import { ChallengeContainer, ChallengeContentContainer, ChallengeTitle, StyledButton } from '../../App.style';
 
 const Countdown = () => {
     const [clicks, setClicks] = useState<number>(0);
@@ -26,12 +27,12 @@ const Countdown = () => {
     }
 
     return (
-        <div className="challenge">
-            <span className="title"> React Challenge #6 - Countdown Timer </span>
-            <div className="challenge-content">
+        <ChallengeContainer>
+            <ChallengeTitle> React Challenge #6 - Countdown Timer </ChallengeTitle>
+            <ChallengeContentContainer>
                 <p>Click as many times are you can before the timer stops! </p>
 
-                <button className="countdown-button" onClick={onClick} >
+                <StyledButton onClick={onClick} >
                     {interval.current? 
                         <div>
                             <p>Clicks: </p> 
@@ -45,9 +46,9 @@ const Countdown = () => {
                         </div>}
                     <p>Seconds Remaining:</p>
                     <h3>{time}</h3>
-                </button>
-            </div>
-        </div>
+                </StyledButton>
+            </ChallengeContentContainer>
+        </ChallengeContainer>
     )
 }
 

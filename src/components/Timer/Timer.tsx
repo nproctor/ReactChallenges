@@ -1,4 +1,5 @@
 import {useState, useRef, MutableRefObject} from 'react';
+import { ChallengeContainer, ChallengeContentContainer, ChallengeTitle, StyledButton } from '../../App.style';
 
 const Timer = () => {
     const [seconds, setSeconds] = useState<number>(0);
@@ -20,16 +21,16 @@ const Timer = () => {
     }
 
     return (
-        <div className='challenge'>
-            <span className="title">React Challenge #2 - Timer</span>
-            <div className='challenge-content'>
+        <ChallengeContainer>
+            <ChallengeTitle>React Challenge #2 - Timer</ChallengeTitle>
+            <ChallengeContentContainer>
                 <h1>Timer</h1>
                 <p>{Math.floor(seconds/60)} mins {seconds%60} seconds</p>
-                <button onClick={startTimer}>Start</button>
-                <button onClick={stopTimer}>Stop</button>
-                <button onClick={() => setSeconds(0)}>Reset</button>
-            </div>
-        </div>
+                <StyledButton onClick={startTimer}>Start</StyledButton>
+                <StyledButton onClick={stopTimer}>Stop</StyledButton>
+                <StyledButton onClick={() => setSeconds(0)}>Reset</StyledButton>
+            </ChallengeContentContainer>
+        </ChallengeContainer>
     )
 }
 

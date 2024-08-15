@@ -1,4 +1,5 @@
 import {FormEvent, useState} from 'react';
+import { BlockText, ChallengeContainer, ChallengeContentContainer, ChallengeTitle, StyledButton } from '../../App.style';
 
 const SubmitFormData = () => {
     const [data, setData] = useState<string[]>([]);
@@ -15,25 +16,25 @@ const SubmitFormData = () => {
     }
 
     return (
-        <div className="challenge">
-            <span className="title"> React Challenge #5 - Submit Form Data</span>
-            <div className='challenge-content'>
+        <ChallengeContainer>
+            <ChallengeTitle> React Challenge #5 - Submit Form Data</ChallengeTitle>
+            <ChallengeContentContainer>
                 <form onSubmit={onSubmit}>
-                    <p>Enter E-mail:</p>
+                    <BlockText>Enter E-mail:</BlockText>
                     <input name="E-mail" placeholder="E-mail" required={true}/>
-                    <p>Enter Name:</p>
+                    <BlockText>Enter Name:</BlockText>
                     <input name="Name" placeholder="Name" required={true}/>   
-                    <p>Enter Age:</p>
+                    <BlockText>Enter Age:</BlockText>
                     <input name="Age" placeholder="Age" type="number" required={true}/>
                     <br/><br/>
-                    <button type="submit">Submit</button>
+                    <StyledButton type="submit">Submit</StyledButton>
                 </form>
                 <ul>
                     {data.length > 0 && "Submitted!"}
                     {data.map( (val, i) => <li key={i}>{val}</li>)}
                 </ul>
-            </div>
-        </div>
+            </ChallengeContentContainer>
+        </ChallengeContainer>
     )
 }
 

@@ -1,4 +1,5 @@
 import {useState, useRef, FormEvent, MouseEvent} from 'react';
+import { ChallengeContainer, ChallengeContentContainer, ChallengeTitle, StyledButton } from '../../App.style';
 const ToDoList = () => {
     const [cities, setCities] = useState<string[]>([]);
     const cityRef = useRef<HTMLInputElement>(null);
@@ -16,20 +17,20 @@ const ToDoList = () => {
     }
 
     return (
-        <div className='challenge'>
-            <span className="title"> React Challenge #3 - ToDo List </span>
-            <div className='challenge-content'>
+        <ChallengeContainer>
+            <ChallengeTitle> React Challenge #3 - ToDo List </ChallengeTitle>
+            <ChallengeContentContainer>
                 <form onSubmit={onSubmit} >
                     <input ref={cityRef} type="text" name="city" placeholder='Enter City'/>
-                    <button type="submit">Submit</button>
+                    <StyledButton type="submit">Submit</StyledButton>
                 </form>
                 <ul>
                     {cities.map((entry, index) => {
                         return <li key={index}> {entry} <button onClick={() => remove(index)}> X </button> </li>
                     })}
                 </ul>
-            </div>
-        </div>
+            </ChallengeContentContainer>
+        </ChallengeContainer>
     )
 }
 
