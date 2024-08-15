@@ -1,4 +1,5 @@
 import './App.css';
+import Countdown from './components/Countdown/Countdown';
 import ProgressBar from './components/ProgressBar/ProgressBar';
 import ShowHideTitle from './components/ShowHideTitle/ShowHideTitle';
 import SubmitFormData from './components/SubmitFormData/SubmitFormData';
@@ -13,6 +14,7 @@ function App() {
       <ToDoList/>
       <ProgressBar/>
       <SubmitFormData/>
+      <Countdown/>
     </div>
   );
 }
