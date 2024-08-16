@@ -12,20 +12,16 @@ const ProgressBar = () => {
         }
     }
     return (
-        <ChallengeContainer>
-            <ChallengeTitle>React Challenge #4 - Progress Bar</ChallengeTitle>
-            <ChallengeContentContainer>
-                <p>Progress Bar</p>
-                <ProgressBarContainer>
-                    <ProgressBarProgress $percent={width}>
-                        <ProgressBarTextContainer>{width}%</ProgressBarTextContainer>
-                    </ProgressBarProgress>
-                </ProgressBarContainer>
-                <span>Input Percentage: 
-                    <input onChange={onChange} type="number"/>%
-                </span>
-            </ChallengeContentContainer>
-        </ChallengeContainer>
+        <div>
+            <ProgressBarContainer>
+                <ProgressBarProgress $percent={width}>
+                    <ProgressBarTextContainer>{width}%</ProgressBarTextContainer>
+                </ProgressBarProgress>
+            </ProgressBarContainer>
+            <span>Input Percentage: 
+                <input onChange={onChange} type="number"/>%
+            </span>
+        </div>
     )
 }
 

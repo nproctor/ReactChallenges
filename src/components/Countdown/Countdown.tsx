@@ -27,28 +27,23 @@ const Countdown = () => {
     }
 
     return (
-        <ChallengeContainer>
-            <ChallengeTitle> React Challenge #6 - Countdown Timer </ChallengeTitle>
-            <ChallengeContentContainer>
-                <p>Click as many times are you can before the timer stops! </p>
-
-                <StyledButton onClick={onClick} >
-                    {interval.current? 
-                        <div>
-                            <p>Clicks: </p> 
-                            <h2>{clicks}</h2>
-                    
-                        </div>
-                        :
-                        <div>
-                            <h2>Click to start!</h2>
-                            <br></br>
-                        </div>}
-                    <p>Seconds Remaining:</p>
-                    <h3>{time}</h3>
-                </StyledButton>
-            </ChallengeContentContainer>
-        </ChallengeContainer>
+        <div>
+            <StyledButton onClick={onClick} >
+                {interval.current? 
+                    <div>
+                        <p>Clicks: </p> 
+                        <h2>{clicks}</h2>
+                
+                    </div>
+                    :
+                    <div>
+                        <h2>Click to start!</h2>
+                        <br></br>
+                    </div>}
+                <p>Seconds Remaining:</p>
+                <h3>{time}</h3>
+            </StyledButton>
+        </div>
     )
 }
 

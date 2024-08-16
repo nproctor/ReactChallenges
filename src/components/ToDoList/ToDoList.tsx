@@ -17,20 +17,17 @@ const ToDoList = () => {
     }
 
     return (
-        <ChallengeContainer>
-            <ChallengeTitle> React Challenge #3 - ToDo List </ChallengeTitle>
-            <ChallengeContentContainer>
-                <form onSubmit={onSubmit} >
-                    <input ref={cityRef} type="text" name="city" placeholder='Enter City'/>
-                    <StyledButton type="submit">Submit</StyledButton>
-                </form>
-                <ul>
-                    {cities.map((entry, index) => {
-                        return <li key={index}> {entry} <button onClick={() => remove(index)}> X </button> </li>
-                    })}
-                </ul>
-            </ChallengeContentContainer>
-        </ChallengeContainer>
+        <div>
+            <form onSubmit={onSubmit} >
+                <input ref={cityRef} type="text" name="city" placeholder='Enter City'/>
+                <StyledButton type="submit">Submit</StyledButton>
+            </form>
+            <ul>
+                {cities.map((entry, index) => {
+                    return <li key={index}> {entry} <button onClick={() => remove(index)}> X </button> </li>
+                })}
+            </ul>
+        </div>
     )
 }
 

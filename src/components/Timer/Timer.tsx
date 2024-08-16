@@ -21,16 +21,13 @@ const Timer = () => {
     }
 
     return (
-        <ChallengeContainer>
-            <ChallengeTitle>React Challenge #2 - Timer</ChallengeTitle>
-            <ChallengeContentContainer>
-                <h1>Timer</h1>
-                <p>{Math.floor(seconds/60)} mins {seconds%60} seconds</p>
-                <StyledButton onClick={startTimer}>Start</StyledButton>
-                <StyledButton onClick={stopTimer}>Stop</StyledButton>
-                <StyledButton onClick={() => setSeconds(0)}>Reset</StyledButton>
-            </ChallengeContentContainer>
-        </ChallengeContainer>
+        <div>
+            <h1>Timer</h1>
+            <p>{Math.floor(seconds/60)} mins {seconds%60} seconds</p>
+            <StyledButton onClick={startTimer}>Start</StyledButton>
+            <StyledButton onClick={stopTimer}>Stop</StyledButton>
+            <StyledButton onClick={() => setSeconds(0)}>Reset</StyledButton>
+        </div>
     )
 }
 
